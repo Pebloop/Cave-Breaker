@@ -11,5 +11,6 @@
     <orderEntry type="library" name="firebase-app-compat" level="application" />
     <orderEntry type="library" name="firebase-auth" level="application" />
     <orderEntry type="library" name="firebase-app" level="application" />
+    <orderEntry type="library" name="cave-breaker.loader" level="application" />
   </component>
 </module>
