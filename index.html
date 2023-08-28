@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Cave-Breaker</title>
-  </head>
-  <body style="text-align: center; padding: 0; border: 0; margin: 0;">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | Cave-Breaker</title>
+</head>
+<body style="text-align: center; padding: 0; border: 0; margin: 0;">
 
-    <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #231F20"></canvas>
-    <script src="Build/Cave-Breaker.loader.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #231F20"></canvas>
+<script src="Build/Cave-Breaker.loader.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDb4WPmrtQ62n19waO3jq_CZpLP7GDXOwk",
+    authDomain: "cave-breaker-77485578.firebaseapp.com",
+    databaseURL: "https://cave-breaker-77485578-default-rtdb.firebaseio.com",
+    projectId: "cave-breaker-77485578",
+    storageBucket: "cave-breaker-77485578.appspot.com",
+    messagingSenderId: "670737043155",
+    appId: "1:670737043155:web:0966588654c88a804d8e26",
+    measurementId: "G-2V9TJYMSGT"
+  };
 
-    <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyDb4WPmrtQ62n19waO3jq_CZpLP7GDXOwk",
-        authDomain: "cave-breaker-77485578.firebaseapp.com",
-        databaseURL: "https://cave-breaker-77485578-default-rtdb.firebaseio.com",
-        projectId: "cave-breaker-77485578",
-        storageBucket: "cave-breaker-77485578.appspot.com",
-        messagingSenderId: "670737043155",
-        appId: "1:670737043155:web:0966588654c88a804d8e26",
-        measurementId: "G-2V9TJYMSGT"
-      };
+  const app = firebase.initializeApp(firebaseConfig);
+  const auth = app.auth();
+  const db = app.database();
 
-      const app = firebase.initializeApp(firebaseConfig);
-      const auth = app.auth();
+  if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+    // Mobile device style: fill the whole browser client area with the game canvas:
+    var meta = document.createElement('meta');
+    meta.name = 'viewport';
+    meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+    document.getElementsByTagName('head')[0].appendChild(meta);
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
+    var canvas = document.querySelector("#unity-canvas");
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
+    canvas.style.position = "fixed";
 
-        var canvas = document.querySelector("#unity-canvas");
-        canvas.style.width = "100%";
-        canvas.style.height = "100%";
-        canvas.style.position = "fixed";
+    document.body.style.textAlign = "left";
+  }
 
-        document.body.style.textAlign = "left";
-      }
-
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/Cave-Breaker.data",
-        frameworkUrl: "Build/Cave-Breaker.framework.js",
-        codeUrl: "Build/Cave-Breaker.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Cave-Breaker",
-        productVersion: "1.0.2",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      }).then((unityInstance) => {
-        window.unityInstance = unityInstance;
-      }).catch((message) => {
-        alert(message);
-      });
-    </script>
-  </body>
+  createUnityInstance(document.querySelector("#unity-canvas"), {
+    dataUrl: "Build/Cave-Breaker.data",
+    frameworkUrl: "Build/Cave-Breaker.framework.js",
+    codeUrl: "Build/Cave-Breaker.wasm",
+    streamingAssetsUrl: "StreamingAssets",
+    companyName: "DefaultCompany",
+    productName: "Cave-Breaker",
+    productVersion: "1.0.2",
+    // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+    // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+  }).then((unityInstance) => {
+    window.unityInstance = unityInstance;
+  }).catch((message) => {
+    alert(message);
+  });
+</script>
+</body>
 </html>
