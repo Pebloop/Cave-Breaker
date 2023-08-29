@@ -6,10 +6,14 @@ using UnityEngine;
 [Serializable]
 public class Database
 {
-    public int test = 0;
+    public string userId = null;
+    public string displayName = null;
+    public string profilePicture = null;
 
     public Database()
     {
-        test = 0;
+        userId = null;
+        displayName = null;
+        profilePicture = null;
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using FirebaseWebGL.Scripts.FirebaseBridge;
 using FirebaseWebGL.Examples.Utils;
@@ -7,7 +5,7 @@ using FirebaseWebGL.Scripts.Objects;
 
 public class NetworkManager : MonoBehaviour
 {
-
+    [SerializeField]
     public Database db;
 
     [SerializeField]
@@ -16,57 +14,84 @@ public class NetworkManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (Application.platform != RuntimePlatform.WebGLPlayer)
+        if (Application.platform == RuntimePlatform.WebGLPlayer)
         {
-            Debug.Log("The code is not running on a WebGL build; as such, the Javascript functions will not be recognized.");
-            return;
+            FirebaseAuth.OnAuthStateChanged(gameObject.name, "StartLoadingGame", "ConnexionError");
+        } else if (Application.platform == RuntimePlatform.Android)
+        {
+            Debug.LogError("Android connexion not yet implemented.");
+        } else if (Application.isEditor)
+        {
+            startGame.displayInformationText();
+            startGame.loadGame();
+        } else
+        {
+            Debug.LogError("Unimplemented platform.");
         }
-        FirebaseAuth.OnAuthStateChanged(gameObject.name, "DisplayUserInfo", "DisplayInfo");
-        GetFromFirebase();
+        
     }
 
-    public void DisplayUserInfo(string user)
+    /**
+     * Execute after succesfull connxexion : retrieve the user data and load and launch game
+     **/
+    public void StartLoadingGame(string user)
     {
         var parsedUser = StringSerializationAPI.Deserialize(typeof(FirebaseUser), user) as FirebaseUser;
-        Debug.Log($"Email: {parsedUser.email}, UserId: {parsedUser.uid}, EmailVerified: {parsedUser.isEmailVerified}");
+        db.userId = parsedUser.providerData[0].uid;
+        GetFromFirebase();
+        db.displayName = parsedUser.displayName;
+        db.profilePicture = parsedUser.providerData[0].photoUrl;
+        PostToFirebase();
         startGame.displayInformationText();
-
+        startGame.loadGame();
     }
 
-    public void DisplayInfo(string info)
+    /**
+     * An error occured during the connexion attempt
+     **/
+    public void ConnexionError(string info)
     {
         Debug.Log(info);
         startGame.displayConnectButton();
     }
 
-    public void SignedInCallback(string user)
+    /**
+     * Callback for methods that do nothing 
+     */
+    public void CallBackDoNothing(string info)
     {
     }
 
-    public void SignedInFallback(string info)
+    public void CallBackPrintInfo(string info)
     {
+        Debug.Log(info);
     }
 
 
     public void GetFromFirebase()
     {
-        Proyecto26.RestClient.Get<Database>("https://cave-breaker-77485578-default-rtdb.firebaseio.com/user.json").Then(response =>
-        {
-            db = response;
-        }).Catch(err => Debug.Log(err.Message));
+        FirebaseDatabase.GetJSON("users/" + db.userId, gameObject.name, "RetrieveDatabaseDatas", "CallBackDoNothing");
+    }
+
+    private void RetrieveDatabaseDatas(string data)
+    {
+        var parsedData = StringSerializationAPI.Deserialize(typeof(Database), data) as Database;
+        db = parsedData;
     }
 
     public void PostToFirebase()
     {
-        Proyecto26.RestClient.Put<Database>("https://cave-breaker-77485578-default-rtdb.firebaseio.com/user.json", db).Then(response =>
-        {
-            Debug.Log("Successfully posted to Firebase");
-        }).Catch(err => Debug.Log(err.Message));
+        string dbSierialized = StringSerializationAPI.Serialize(typeof(Database), db);
+
+        FirebaseDatabase.PostJSON(
+            "users/" + db.userId,
+            dbSierialized, gameObject.name, "CallBackDoNothing", "CallBackDoNothing"
+            );
     }
 
     public void ConnectWithGoogle()
     {
-        FirebaseAuth.SignInWithGoogle(gameObject.name, "SignedInCallback", "SignedInFallback");
+        FirebaseAuth.SignInWithGoogle(gameObject.name, "CallBackDoNothing", "CallBackDoNothing");
     }
 
     // Update is called once per frame

@@ -16,5 +16,7 @@ namespace FirebaseWebGL.Scripts.Objects
         public string providerId;
 
         public string userId;
+
+        public string uid;
     }
 }

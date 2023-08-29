@@ -10,6 +10,9 @@ public class StartGame : MonoBehaviour
     [SerializeField]
     private GameObject connectButton = null;
 
+    [SerializeField]
+    private NetworkManager networkManager = null;
+
     //[SerializeField]
     //private GameObject loadingAnimation = null;
 
@@ -24,11 +27,10 @@ public class StartGame : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenuScene");
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void loadGame()
     {
-        informationText.gameObject.SetActive(false);
-        connectButton.SetActive(false);
+        changeInformationText("Welcome " + networkManager.db.displayName + " !");   
+        launchGame();
     }
 
     public void displayInformationText()
@@ -39,6 +41,13 @@ public class StartGame : MonoBehaviour
     public void displayConnectButton()
     {
         connectButton.SetActive(true);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        informationText.gameObject.SetActive(false);
+        connectButton.SetActive(false);
     }
 
     // Update is called once per frame

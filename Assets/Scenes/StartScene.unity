@@ -320,7 +320,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   db:
-    test: 0
+    userId: 
+    displayName: 
+    profilePicture: 
   startGame: {fileID: 940937996}
 --- !u!4 &684550048
 Transform:
@@ -350,7 +352,7 @@ GameObject:
   - component: {fileID: 736322762}
   - component: {fileID: 736322761}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ConnectWithGoogle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -501,6 +503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   informationText: {fileID: 1466806606}
   connectButton: {fileID: 736322759}
+  networkManager: {fileID: 684550047}
 --- !u!4 &940937997
 Transform:
   m_ObjectHideFlags: 0
@@ -596,7 +599,7 @@ GameObject:
   - component: {fileID: 1286171545}
   - component: {fileID: 1286171544}
   m_Layer: 5
-  m_Name: background
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -776,7 +779,7 @@ GameObject:
   - component: {fileID: 1466806607}
   - component: {fileID: 1466806606}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LoadingInformation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -909,8 +912,9 @@ GameObject:
   - component: {fileID: 1999473843}
   - component: {fileID: 1999473845}
   - component: {fileID: 1999473844}
+  - component: {fileID: 1999473846}
   m_Layer: 5
-  m_Name: logo
+  m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -930,10 +934,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1292219672}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -148.66882, y: 75.801346}
-  m_SizeDelta: {x: -319.64862, y: -287.07617}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 317.61, y: 174.46}
+  m_SizeDelta: {x: 0, y: 273.16}
   m_Pivot: {x: 0.96509254, y: 0.6386644}
 --- !u!114 &1999473844
 MonoBehaviour:
@@ -957,7 +961,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 55389c2d7023c8d499911140053b7430, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -973,6 +977,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999473842}
   m_CullTransparentMesh: 1
+--- !u!114 &1999473846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999473842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 2
+  m_AspectRatio: 2.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
