@@ -139,8 +139,8 @@ TextureImporter:
       name: ts_map_classic_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 448
+        x: 1
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -160,8 +160,8 @@ TextureImporter:
       name: ts_map_classic_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 448
+        x: 67
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -181,8 +181,8 @@ TextureImporter:
       name: ts_map_classic_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 448
+        x: 133
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -202,8 +202,8 @@ TextureImporter:
       name: ts_map_classic_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 448
+        x: 199
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -223,8 +223,8 @@ TextureImporter:
       name: ts_map_classic_4
       rect:
         serializedVersion: 2
-        x: 256
-        y: 448
+        x: 265
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -244,8 +244,8 @@ TextureImporter:
       name: ts_map_classic_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 384
+        x: 1
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -265,8 +265,8 @@ TextureImporter:
       name: ts_map_classic_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 384
+        x: 67
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -286,8 +286,8 @@ TextureImporter:
       name: ts_map_classic_7
       rect:
         serializedVersion: 2
-        x: 128
-        y: 384
+        x: 133
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -307,8 +307,8 @@ TextureImporter:
       name: ts_map_classic_8
       rect:
         serializedVersion: 2
-        x: 192
-        y: 384
+        x: 199
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -328,8 +328,8 @@ TextureImporter:
       name: ts_map_classic_9
       rect:
         serializedVersion: 2
-        x: 256
-        y: 384
+        x: 265
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -349,8 +349,8 @@ TextureImporter:
       name: ts_map_classic_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
+        x: 1
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -370,8 +370,8 @@ TextureImporter:
       name: ts_map_classic_11
       rect:
         serializedVersion: 2
-        x: 64
-        y: 320
+        x: 67
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -391,8 +391,8 @@ TextureImporter:
       name: ts_map_classic_12
       rect:
         serializedVersion: 2
-        x: 128
-        y: 320
+        x: 133
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -412,8 +412,8 @@ TextureImporter:
       name: ts_map_classic_13
       rect:
         serializedVersion: 2
-        x: 192
-        y: 320
+        x: 199
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -433,8 +433,8 @@ TextureImporter:
       name: ts_map_classic_14
       rect:
         serializedVersion: 2
-        x: 256
-        y: 320
+        x: 265
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -454,8 +454,8 @@ TextureImporter:
       name: ts_map_classic_15
       rect:
         serializedVersion: 2
-        x: 320
-        y: 320
+        x: 331
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -475,8 +475,8 @@ TextureImporter:
       name: ts_map_classic_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
+        x: 1
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -496,8 +496,8 @@ TextureImporter:
       name: ts_map_classic_17
       rect:
         serializedVersion: 2
-        x: 64
-        y: 256
+        x: 67
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -517,8 +517,8 @@ TextureImporter:
       name: ts_map_classic_18
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
+        x: 133
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -538,8 +538,8 @@ TextureImporter:
       name: ts_map_classic_19
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
+        x: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -559,8 +559,8 @@ TextureImporter:
       name: ts_map_classic_20
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
+        x: 265
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -580,8 +580,8 @@ TextureImporter:
       name: ts_map_classic_21
       rect:
         serializedVersion: 2
-        x: 320
-        y: 256
+        x: 331
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -601,8 +601,8 @@ TextureImporter:
       name: ts_map_classic_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 1
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -622,8 +622,8 @@ TextureImporter:
       name: ts_map_classic_23
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
+        x: 67
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -643,8 +643,8 @@ TextureImporter:
       name: ts_map_classic_24
       rect:
         serializedVersion: 2
-        x: 128
-        y: 192
+        x: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -664,8 +664,8 @@ TextureImporter:
       name: ts_map_classic_25
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
+        x: 199
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -685,8 +685,8 @@ TextureImporter:
       name: ts_map_classic_26
       rect:
         serializedVersion: 2
-        x: 256
-        y: 192
+        x: 265
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -706,8 +706,8 @@ TextureImporter:
       name: ts_map_classic_27
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 1
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -727,8 +727,8 @@ TextureImporter:
       name: ts_map_classic_28
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 67
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -748,8 +748,8 @@ TextureImporter:
       name: ts_map_classic_29
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 133
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -769,8 +769,8 @@ TextureImporter:
       name: ts_map_classic_30
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
+        x: 199
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -790,8 +790,8 @@ TextureImporter:
       name: ts_map_classic_31
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
+        x: 265
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -811,8 +811,8 @@ TextureImporter:
       name: ts_map_classic_32
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 1
+        y: 67
         width: 64
         height: 64
       alignment: 0
@@ -832,8 +832,8 @@ TextureImporter:
       name: ts_map_classic_33
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 67
+        y: 67
         width: 64
         height: 64
       alignment: 0
@@ -853,8 +853,8 @@ TextureImporter:
       name: ts_map_classic_34
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
+        x: 133
+        y: 67
         width: 64
         height: 64
       alignment: 0
@@ -874,8 +874,8 @@ TextureImporter:
       name: ts_map_classic_35
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
+        x: 199
+        y: 67
         width: 64
         height: 64
       alignment: 0
@@ -895,8 +895,8 @@ TextureImporter:
       name: ts_map_classic_36
       rect:
         serializedVersion: 2
-        x: 256
-        y: 64
+        x: 265
+        y: 67
         width: 64
         height: 64
       alignment: 0
