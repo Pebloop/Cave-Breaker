@@ -1,0 +1,102 @@
+[gd_scene load_steps=13 format=3 uid="uid://b04w07xmynwlh"]
+
+[ext_resource type="PackedScene" uid="uid://dgs5dfbwuuof7" path="res://cave-breaker/Scenes/Scene_Home.tscn" id="1_ev8tx"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/scenes/home/TutorialManagerHome.gd" id="2_tero1"]
+[ext_resource type="Resource" uid="uid://dh4roingrhh51" path="res://cave-breaker/ressources/Dialogs/Dialogs/tutorial_dialogs.tres" id="3_f40wa"]
+[ext_resource type="Texture2D" uid="uid://iowvjp6ktvyn" path="res://cave-breaker/Images/UI/Speech_bubble.png" id="4_g8edh"]
+[ext_resource type="Resource" uid="uid://reh8u7kjykpd" path="res://cave-breaker/ressources/Dialogs/DialogsAction/tutorial_000.tres" id="4_ycj32"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/dialogs/DialogsActionManagerCell.gd" id="5_1h6b4"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/dialogs/DialogsActionManager.gd" id="6_1lxel"]
+
+[sub_resource type="Resource" id="Resource_ouopn"]
+script = ExtResource("5_1h6b4")
+key = "TUTO_000"
+dialog_action = ExtResource("4_ycj32")
+
+[sub_resource type="Resource" id="Resource_h5b2n"]
+script = ExtResource("6_1lxel")
+dialogs_action = Array[ExtResource("5_1h6b4")]([SubResource("Resource_ouopn")])
+
+[sub_resource type="Gradient" id="Gradient_nknhd"]
+colors = PackedColorArray(0, 0, 0, 0.466667, 0, 0, 0, 0.466667)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_b8lsm"]
+gradient = SubResource("Gradient_nknhd")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ayama"]
+load_path = "res://.godot/imported/monstrolab_AI_preview.png-1a5cf8f9c5f1adb4b3d103553a154f74.ctex"
+
+[node name="SceneGuiHome" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SceneHome" parent="." instance=ExtResource("1_ev8tx")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Tutorial" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("character_tex", "bubble_text")]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_tero1")
+character_tex = NodePath("monstrolab")
+bubble_text = NodePath("speech_bubble/text")
+tutorial_dialogs = ExtResource("3_f40wa")
+dialogs_action_manager = SubResource("Resource_h5b2n")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Tutorial"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_b8lsm")
+
+[node name="monstrolab" type="TextureRect" parent="CanvasLayer/Tutorial"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -384.0
+offset_right = 245.0
+grow_vertical = 0
+texture = SubResource("CompressedTexture2D_ayama")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="speech_bubble" type="TextureRect" parent="CanvasLayer/Tutorial"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 54.0
+offset_right = 704.0
+offset_bottom = 451.0
+texture = ExtResource("4_g8edh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="text" type="RichTextLabel" parent="CanvasLayer/Tutorial/speech_bubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.533
+anchor_top = 0.464
+anchor_right = 0.533
+anchor_bottom = 0.464
+offset_left = -163.891
+offset_top = -110.208
+offset_right = 164.109
+offset_bottom = 83.792
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[color=#000000]
+[/color]"
+scroll_active = false

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="TilesetSideRef" load_steps=2 format=3 uid="uid://b4j8rkja0lr1y"]
+
+[ext_resource type="Script" path="res://cave-breaker/Scripts/scenes/home/TilesetSideRef.gd" id="1_uhk3g"]
+
+[resource]
+script = ExtResource("1_uhk3g")
+side_left = Vector2i(0, 1)
+side_right = Vector2i(2, 1)
+side_top = Vector2i(1, 0)
+side_bottom = Vector2i(1, 2)
+corner_top_left = Vector2i(3, 0)
+corner_top_right = Vector2i(4, 0)
+corner_bottom_left = Vector2i(3, 1)
+corner_bottom_right = Vector2i(4, 1)
+inside_corner_top_left = Vector2i(0, 0)
+inside_corner_top_right = Vector2i(2, 0)
+inside_corner_bottom_left = Vector2i(0, 2)
+inside_corner_bottom_right = Vector2i(2, 2)

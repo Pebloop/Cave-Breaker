@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Monster" load_steps=5 format=3 uid="uid://bbbxcyk6c4d0m"]
+
+[ext_resource type="Script" path="res://cave-breaker/Scripts/monsters/Monster.gd" id="1_bkfdl"]
+[ext_resource type="Texture2D" uid="uid://bncqwdrqq54ao" path="res://cave-breaker/Images/Monsters/blobs/smee/smee_slot_active.png" id="2_1u325"]
+[ext_resource type="Texture2D" uid="uid://bum30xf1586dq" path="res://cave-breaker/Images/Monsters/blobs/smee/smee_slot_unactive.png" id="3_iqpjy"]
+[ext_resource type="Texture2D" uid="uid://bsylog4noyg5y" path="res://cave-breaker/Images/Monsters/blobs/smee/smee.png" id="4_d20my"]
+
+[resource]
+script = ExtResource("1_bkfdl")
+id = "MONSTER_SMEE"
+name = "Smee"
+rank = 0
+sprite = ExtResource("4_d20my")
+slot_unactive = ExtResource("3_iqpjy")
+slot_active = ExtResource("2_1u325")
+power_count = 3

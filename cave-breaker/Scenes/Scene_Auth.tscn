@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn0gu5f6uv217"]
+
+[ext_resource type="AudioStream" uid="uid://b2g4w7ruy7i1s" path="res://cave-breaker/Audio/Music/title_music.mp3" id="1_4ybke"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/LoopAudioMP3.gd" id="2_cprmq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_4ybke")
+volume_db = -13.117
+autoplay = true
+script = ExtResource("2_cprmq")

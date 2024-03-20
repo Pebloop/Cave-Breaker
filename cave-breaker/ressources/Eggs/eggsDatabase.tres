@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EggDatabase" load_steps=6 format=3 uid="uid://bpwnpy68qj5dn"]
+
+[ext_resource type="Resource" uid="uid://brf04n7xdyw20" path="res://cave-breaker/ressources/Eggs/eggRed.tres" id="1_e1msj"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/Eggs/EggDatabase.gd" id="1_kl1t3"]
+[ext_resource type="Resource" uid="uid://ukki5rdckpep" path="res://cave-breaker/ressources/Eggs/eggBlue.tres" id="2_cqxrv"]
+[ext_resource type="Resource" uid="uid://vu38bm2o23ir" path="res://cave-breaker/ressources/Eggs/eggGreen.tres" id="3_8umax"]
+[ext_resource type="Resource" uid="uid://qlbtt251fb5r" path="res://cave-breaker/ressources/Eggs/eggOrange.tres" id="4_23fe1"]
+
+[resource]
+script = ExtResource("1_kl1t3")
+eggs = Array[Resource("res://cave-breaker/Scripts/monsters/Egg.gd")]([ExtResource("1_e1msj"), ExtResource("2_cqxrv"), ExtResource("3_8umax"), ExtResource("4_23fe1")])

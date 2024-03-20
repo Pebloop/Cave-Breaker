@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GameLevel" load_steps=2 format=3 uid="uid://cpjvnaanpi0vw"]
+
+[ext_resource type="Script" path="res://cave-breaker/Scripts/GameLevel.gd" id="1_3x2g1"]
+
+[resource]
+script = ExtResource("1_3x2g1")
+name = "My level"
+eggs = Array[Resource("res://cave-breaker/Scripts/Eggs/Egg.gd")]([])
+width = 2
+height = 3
+board = Array[int]([])

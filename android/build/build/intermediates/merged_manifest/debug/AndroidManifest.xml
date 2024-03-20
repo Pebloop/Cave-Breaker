@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pebloop.cavebreaker"
+    android:installLocation="auto"
+    android:versionCode="3"
+    android:versionName="1.0.2" >
+
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="33" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:glEsVersion="0x00030000"
+        android:required="true" />
+
+    <queries>
+        <package android:name="com.google.android.gms" />
+        <package android:name="com.android.vending" />
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:appCategory="game"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:hasFragileUserData="false"
+        android:icon="@mipmap/icon"
+        android:isGame="true"
+        android:label="@string/godot_project_name_string"
+        android:requestLegacyExternalStorage="false" >
+        <meta-data
+            android:name="com.google.android.gms.games.APP_ID"
+            android:value="@string/game_services_project_id" />
+
+        <activity
+            android:name="com.godot.game.GodotApp"
+            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
+            android:excludeFromRecents="false"
+            android:exported="true"
+            android:label="@string/godot_project_name_string"
+            android:launchMode="singleInstancePerTask"
+            android:resizeableActivity="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/GodotAppSplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Records the version of the Godot editor used for building -->
+        <meta-data
+            android:name="org.godotengine.editor.version"
+            android:value="4.2.stable" /> <!-- Records the version of the Godot library -->
+        <meta-data
+            android:name="org.godotengine.library.version"
+            android:value="4.2.0.stable" />
+
+        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+
+        <activity
+            android:name="org.godotengine.godot.utils.ProcessPhoenix"
+            android:exported="false"
+            android:process=":phoenix"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.pebloop.cavebreaker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/godot_provider_paths" />
+        </provider>
+        <!--
+        Plugin metadata:
+
+        - In the `android:name` attribute, the `org.godotengine.plugin.v2` prefix
+        is required so Godot can recognize the project as a valid Godot
+        Android plugin. The plugin name following the prefix should match the value
+        of the plugin name returned by the plugin initializer.
+
+        - The `android:value` attribute should be the classpath to the plugin
+        initializer.
+        -->
+        <meta-data
+            android:name="org.godotengine.plugin.v2.GodotPlayGameServices"
+            android:value="com.jacobibanez.plugin.android.godotplaygameservices.GodotAndroidPlugin" />
+
+        <provider
+            android:name="com.google.android.gms.games.provider.PlayGamesInitProvider"
+            android:authorities="com.pebloop.cavebreaker.playgamesinitprovider"
+            android:exported="false"
+            android:initOrder="99" />
+
+        <activity
+            android:name="com.google.android.gms.games.internal.v2.resolution.GamesResolutionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Games.Transparent" />
+
+        <meta-data
+            android:name="com.google.android.gms.games.version"
+            android:value="@string/play_games_sdk_version" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

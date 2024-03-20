@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://drf1g4smksr5q"]
+
+[ext_resource type="Texture2D" uid="uid://cvqm1lemu453v" path="res://cave-breaker/Images/Logo/Logo_Large.png" id="1_xlv57"]
+[ext_resource type="PackedScene" uid="uid://dn0gu5f6uv217" path="res://cave-breaker/Scenes/Scene_Auth.tscn" id="2_blmqd"]
+[ext_resource type="Texture2D" uid="uid://dqapwokyavdx" path="res://cave-breaker/Images/google_hover.png" id="2_geh33"]
+[ext_resource type="Texture2D" uid="uid://crmmby70424pk" path="res://cave-breaker/Images/google.png" id="3_p3rdr"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/GoogleAuthButton.gd" id="4_214un"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/MultiplayerManager.gd" id="5_5tftl"]
+
+[node name="SceneGuiAuth" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.384314, 0.207843, 0.0627451, 1)
+
+[node name="MarginContainer2" type="MarginContainer" parent="UI"]
+layout_mode = 2
+offset_top = 434.0
+offset_right = 1152.0
+offset_bottom = 562.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer2"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/MarginContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="UI/MarginContainer2/VBoxContainer/CenterContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("3_p3rdr")
+texture_pressed = ExtResource("2_geh33")
+texture_hover = ExtResource("2_geh33")
+script = ExtResource("4_214un")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1012.87, 315)
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/VBoxContainer/MarginContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_xlv57")
+stretch_mode = 5
+
+[node name="SCENE" parent="." instance=ExtResource("2_blmqd")]
+
+[node name="MULTIPLAYER" type="Node" parent="." node_paths=PackedStringArray("node_2D_to_delete", "ui_to_delete")]
+script = ExtResource("5_5tftl")
+node_2D_to_delete = NodePath("../SCENE")
+ui_to_delete = NodePath("../UI")
+server_ip = "141.94.223.12"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_top = 434.0
+offset_right = 1152.0
+offset_bottom = 562.0
+text = "ydry"
+script = ExtResource("4_214un")
+
+[connection signal="button_up" from="UI/MarginContainer2/VBoxContainer/CenterContainer/TextureButton" to="UI/MarginContainer2/VBoxContainer/CenterContainer/TextureButton" method="_on_button_up"]
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]

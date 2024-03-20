@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Egg" load_steps=3 format=3 uid="uid://brf04n7xdyw20"]
+
+[ext_resource type="Script" path="res://cave-breaker/Scripts/Eggs/Egg.gd" id="1_83jv7"]
+[ext_resource type="Texture2D" uid="uid://cpm0a6gk8ys31" path="res://cave-breaker/Images/Eggs/egg_red.png" id="2_q2uw1"]
+
+[resource]
+script = ExtResource("1_83jv7")
+id = "EGG_RED"
+name = "red egg"
+sprite = ExtResource("2_q2uw1")
+hatch_monsters = Array[Resource("res://cave-breaker/Scripts/monsters/Monster.gd")]([])

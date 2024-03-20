@@ -1,0 +1,90 @@
+[gd_scene load_steps=8 format=3 uid="uid://drf1g4smksr5q"]
+
+[ext_resource type="Texture2D" uid="uid://cvqm1lemu453v" path="res://cave-breaker/Images/Logo/Logo_Large.png" id="1_xlv57"]
+[ext_resource type="PackedScene" uid="uid://dn0gu5f6uv217" path="res://cave-breaker/Scenes/Scene_Auth.tscn" id="2_blmqd"]
+[ext_resource type="Texture2D" uid="uid://dqapwokyavdx" path="res://cave-breaker/Images/google_hover.png" id="2_geh33"]
+[ext_resource type="Texture2D" uid="uid://crmmby70424pk" path="res://cave-breaker/Images/google.png" id="3_p3rdr"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/multiplayer/GoogleAuthButton.gd" id="4_214un"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/multiplayer/MultiplayerManager.gd" id="5_5tftl"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/multiplayer/OAuth2.gd" id="7_ulbe2"]
+
+[node name="SceneGuiAuth" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.384314, 0.207843, 0.0627451, 1)
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 440
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("1_xlv57")
+stretch_mode = 5
+
+[node name="TextureButton" type="TextureButton" parent="." node_paths=PackedStringArray("oauth2")]
+layout_mode = 2
+offset_left = 512.0
+offset_top = 440.0
+offset_right = 640.0
+offset_bottom = 568.0
+texture_normal = ExtResource("3_p3rdr")
+texture_pressed = ExtResource("2_geh33")
+texture_hover = ExtResource("2_geh33")
+script = ExtResource("4_214un")
+oauth2 = NodePath("../OAuth2")
+
+[node name="SCENE" parent="." instance=ExtResource("2_blmqd")]
+
+[node name="MULTIPLAYER" type="Node" parent="." node_paths=PackedStringArray("node_2D_to_delete", "ui_to_delete")]
+script = ExtResource("5_5tftl")
+node_2D_to_delete = NodePath("../SCENE")
+ui_to_delete = NodePath("../MarginContainer")
+
+[node name="OAuth2" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_ulbe2")
+
+[connection signal="button_up" from="TextureButton" to="TextureButton" method="_on_button_up"]

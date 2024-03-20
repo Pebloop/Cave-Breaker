@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Dialogs" load_steps=5 format=3 uid="uid://dh4roingrhh51"]
+
+[ext_resource type="Script" path="res://cave-breaker/Scripts/dialogs/dialog.gd" id="1_bagcn"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/dialogs/Dialogs.gd" id="2_84uha"]
+
+[sub_resource type="Resource" id="Resource_03fwj"]
+script = ExtResource("1_bagcn")
+key = "TUTO_000_0"
+dialog_fr = "Salut !"
+dialog_en = "unused"
+
+[sub_resource type="Resource" id="Resource_71lla"]
+script = ExtResource("1_bagcn")
+key = "TUTO_000_1"
+dialog_fr = "Tu es nouveau ?"
+dialog_en = "unused"
+
+[resource]
+script = ExtResource("2_84uha")
+dialogs = Array[ExtResource("1_bagcn")]([SubResource("Resource_03fwj"), SubResource("Resource_71lla")])

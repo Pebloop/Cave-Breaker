@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="MonstersDatabase" load_steps=3 format=3 uid="uid://c1ntmj71tduj3"]
+
+[ext_resource type="Script" path="res://cave-breaker/Scripts/monsters/MonstersDatabase.gd" id="1_30ihe"]
+[ext_resource type="Resource" uid="uid://bbbxcyk6c4d0m" path="res://cave-breaker/ressources/Monsters/monster_smee.tres" id="1_khjcf"]
+
+[resource]
+script = ExtResource("1_30ihe")
+monsters = Array[Resource("res://cave-breaker/Scripts/monsters/Monster.gd")]([ExtResource("1_khjcf")])

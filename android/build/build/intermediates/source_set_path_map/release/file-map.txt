@@ -1,0 +1,17 @@
+com.godot.game-fragment-1.3.6-0 C:\Users\alexl\.gradle\caches\transforms-3\400dd26017d2e15e0dbda5406f9ef695\transformed\fragment-1.3.6\res
+com.godot.game-jetified-savedstate-1.1.0-1 C:\Users\alexl\.gradle\caches\transforms-3\593730fcc846ed2ebab131855fdfdf10\transformed\jetified-savedstate-1.1.0\res
+com.godot.game-jetified-godot-lib.template_release-2 C:\Users\alexl\.gradle\caches\transforms-3\59a3ed41388f796b505fdeb2a9fa83aa\transformed\jetified-godot-lib.template_release\res
+com.godot.game-lifecycle-viewmodel-2.3.1-3 C:\Users\alexl\.gradle\caches\transforms-3\5aa12fb745a52917a1e84e6ab6abb158\transformed\lifecycle-viewmodel-2.3.1\res
+com.godot.game-jetified-play-services-base-18.0.1-4 C:\Users\alexl\.gradle\caches\transforms-3\a7ad36f58a6749e591d88a51cd5b7b5c\transformed\jetified-play-services-base-18.0.1\res
+com.godot.game-jetified-play-services-basement-18.0.0-5 C:\Users\alexl\.gradle\caches\transforms-3\be02d3ef6440412c6c138bc4320b6458\transformed\jetified-play-services-basement-18.0.0\res
+com.godot.game-lifecycle-runtime-2.3.1-6 C:\Users\alexl\.gradle\caches\transforms-3\ce4861e2b8af11c4e83c6f7eba5a7e01\transformed\lifecycle-runtime-2.3.1\res
+com.godot.game-core-1.2.0-7 C:\Users\alexl\.gradle\caches\transforms-3\d8985fa984ba520cda9fd843e0c97aab\transformed\core-1.2.0\res
+com.godot.game-jetified-play-services-games-v2-19.0.0-8 C:\Users\alexl\.gradle\caches\transforms-3\e4aed51f9e2ffc5c59b3eec4af67d494\transformed\jetified-play-services-games-v2-19.0.0\res
+com.godot.game-pngs-9 C:\Users\alexl\Documents\CaveBreaker\android\build\build\generated\res\pngs\release
+com.godot.game-resValues-10 C:\Users\alexl\Documents\CaveBreaker\android\build\build\generated\res\resValues\release
+com.godot.game-rs-11 C:\Users\alexl\Documents\CaveBreaker\android\build\build\generated\res\rs\release
+com.godot.game-mergeReleaseResources-12 C:\Users\alexl\Documents\CaveBreaker\android\build\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.godot.game-mergeReleaseResources-13 C:\Users\alexl\Documents\CaveBreaker\android\build\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.godot.game-merged_res-14 C:\Users\alexl\Documents\CaveBreaker\android\build\build\intermediates\merged_res\release
+com.godot.game-build-15 C:\Users\alexl\Documents\CaveBreaker\android\build\res
+com.godot.game-release-16 C:\Users\alexl\Documents\CaveBreaker\android\build\src\release\res
