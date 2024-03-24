@@ -27,6 +27,7 @@ LeaderboardsClient="*res://addons/GodotPlayGameServices/autoloads/leaderboards_c
 SnapshotsClient="*res://addons/GodotPlayGameServices/autoloads/snapshots_client.gd"
 EventsClient="*res://addons/GodotPlayGameServices/autoloads/events_client.gd"
 SceneSwitcher="*res://cave-breaker/Scripts/Globals/SceneSwitcher.gd"
+UserData="*res://cave-breaker/Scripts/Globals/UserData.gd"
 
 [display]
 

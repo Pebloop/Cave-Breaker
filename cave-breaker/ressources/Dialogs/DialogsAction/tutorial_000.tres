@@ -1,14 +1,59 @@
-[gd_resource type="Resource" script_class="DialogAction" load_steps=3 format=3 uid="uid://reh8u7kjykpd"]
+[gd_resource type="Resource" script_class="DialogAction" load_steps=10 format=3 uid="uid://reh8u7kjykpd"]
 
 [ext_resource type="Script" path="res://cave-breaker/Scripts/dialogs/DialogAction.gd" id="1_cerdm"]
+[ext_resource type="Resource" uid="uid://c6wcagjwdl16u" path="res://cave-breaker/ressources/Dialogs/DialogEvents/dialogEventOpenRoom_000.tres" id="1_kagb1"]
+
+[sub_resource type="Resource" id="Resource_1v7i4"]
+script = ExtResource("1_cerdm")
+dialog_key = "TUTO_000_7"
+choices = Array[ExtResource("1_cerdm")]([])
+events = Array[Resource("res://cave-breaker/Scripts/dialogs/events/DialogEvent.gd")]([])
+
+[sub_resource type="Resource" id="Resource_qqrq1"]
+script = ExtResource("1_cerdm")
+dialog_key = "TUTO_000_6"
+next_action = SubResource("Resource_1v7i4")
+choices = Array[ExtResource("1_cerdm")]([])
+events = Array[Resource("res://cave-breaker/Scripts/dialogs/events/DialogEvent.gd")]([])
+
+[sub_resource type="Resource" id="Resource_ll8it"]
+script = ExtResource("1_cerdm")
+dialog_key = "TUTO_000_5"
+next_action = SubResource("Resource_qqrq1")
+choices = Array[ExtResource("1_cerdm")]([])
+events = Array[Resource("res://cave-breaker/Scripts/dialogs/events/DialogEvent.gd")]([])
+
+[sub_resource type="Resource" id="Resource_gg0vl"]
+script = ExtResource("1_cerdm")
+dialog_key = "TUTO_000_4"
+next_action = SubResource("Resource_ll8it")
+choices = Array[ExtResource("1_cerdm")]([])
+events = Array[Resource("res://cave-breaker/Scripts/dialogs/events/DialogEvent.gd")]([ExtResource("1_kagb1")])
+
+[sub_resource type="Resource" id="Resource_gum4s"]
+script = ExtResource("1_cerdm")
+dialog_key = "TUTO_000_3"
+next_action = SubResource("Resource_gg0vl")
+choices = Array[ExtResource("1_cerdm")]([])
+events = Array[Resource("res://cave-breaker/Scripts/dialogs/events/DialogEvent.gd")]([])
+
+[sub_resource type="Resource" id="Resource_1x4oe"]
+script = ExtResource("1_cerdm")
+dialog_key = "TUTO_000_2"
+next_action = SubResource("Resource_gum4s")
+choices = Array[ExtResource("1_cerdm")]([])
+events = Array[Resource("res://cave-breaker/Scripts/dialogs/events/DialogEvent.gd")]([])
 
 [sub_resource type="Resource" id="Resource_r1xkj"]
 script = ExtResource("1_cerdm")
 dialog_key = "TUTO_000_1"
+next_action = SubResource("Resource_1x4oe")
 choices = Array[ExtResource("1_cerdm")]([])
+events = Array[Resource("res://cave-breaker/Scripts/dialogs/events/DialogEvent.gd")]([])
 
 [resource]
 script = ExtResource("1_cerdm")
 dialog_key = "TUTO_000_0"
 next_action = SubResource("Resource_r1xkj")
 choices = Array[ExtResource("1_cerdm")]([])
+events = Array[Resource("res://cave-breaker/Scripts/dialogs/events/DialogEvent.gd")]([])

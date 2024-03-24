@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="GameLevel" load_steps=2 format=3 uid="uid://cpjvnaanpi0vw"]
+[gd_resource type="Resource" script_class="GameLevel" load_steps=4 format=3 uid="uid://cpjvnaanpi0vw"]
 
 [ext_resource type="Script" path="res://cave-breaker/Scripts/GameLevel.gd" id="1_3x2g1"]
+[ext_resource type="Resource" uid="uid://ukki5rdckpep" path="res://cave-breaker/ressources/Eggs/eggBlue.tres" id="1_h2m86"]
+[ext_resource type="Resource" uid="uid://brf04n7xdyw20" path="res://cave-breaker/ressources/Eggs/eggRed.tres" id="2_kvsw0"]
 
 [resource]
 script = ExtResource("1_3x2g1")
 name = "My level"
-eggs = Array[Resource("res://cave-breaker/Scripts/Eggs/Egg.gd")]([])
-width = 2
-height = 3
-board = Array[int]([])
+eggs = Array[Resource("res://cave-breaker/Scripts/Eggs/Egg.gd")]([ExtResource("1_h2m86"), ExtResource("2_kvsw0")])
+width = 3
+height = 2
+board = Array[int]([-1, 0, -1, 0, 1, 0])

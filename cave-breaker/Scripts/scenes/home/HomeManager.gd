@@ -1,11 +1,12 @@
 extends Node2D
 class_name HomeManager
 
-@export var roomManager : RoomManager
+@export var roomsManager : RoomsManager
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	roomManager.openRoom(0)
+	pass
+	#roomManager.openRoom(0)
 	
 
 

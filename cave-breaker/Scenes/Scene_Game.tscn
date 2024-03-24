@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://3r5eoun7a7jh"]
+[gd_scene load_steps=5 format=3 uid="uid://3r5eoun7a7jh"]
+
+[ext_resource type="TileSet" uid="uid://dexr6egablh4w" path="res://cave-breaker/ressources/levelTileset.tres" id="1_3thno"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/scenes/game/GameLevelBack.gd" id="2_8kk68"]
+[ext_resource type="Resource" uid="uid://dbic3iy3skmpf" path="res://cave-breaker/ressources/levelsSideTiles.tres" id="3_hyxtn"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/scenes/game/EggManager.gd" id="4_qjgtl"]
 
 [node name="SceneGame" type="Node2D"]
+
+[node name="level_back" type="TileMap" parent="."]
+tile_set = ExtResource("1_3thno")
+format = 2
+layer_0/name = "back"
+script = ExtResource("2_8kk68")
+sideLevelBackCells = ExtResource("3_hyxtn")
+
+[node name="egg_manager" type="Node2D" parent="."]
+script = ExtResource("4_qjgtl")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bik88ub5mpyu2"]
+[gd_scene load_steps=3 format=3 uid="uid://bik88ub5mpyu2"]
 
 [ext_resource type="PackedScene" uid="uid://3r5eoun7a7jh" path="res://cave-breaker/Scenes/Scene_Game.tscn" id="1_ty5y3"]
+[ext_resource type="PackedScene" uid="uid://dva38yhs4txio" path="res://cave-breaker/Prefabs/Game/monster_slot.tscn" id="2_d82hw"]
 
 [node name="SceneGuiGame" type="Control"]
 layout_mode = 3
@@ -11,3 +12,21 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="SceneGame" parent="." instance=ExtResource("1_ty5y3")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+
+[node name="MonsterSlot" parent="CanvasLayer/VBoxContainer/HBoxContainer" instance=ExtResource("2_d82hw")]
+layout_mode = 2

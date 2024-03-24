@@ -1,11 +1,13 @@
 extends Node2D
-class_name RoomManager
+class_name RoomsManager
 
 @export var tileMap : TileMap
 @export var roomsMap : TileMap
 
 @export var darknessTileSet : TileSet
 @export var sideDarknessCells : TilesetSideRef
+
+@export var rooms: Array[RoomManager] = []
 
 # List of all the patterns that set a border tile
 var patterns : Dictionary = {
@@ -48,14 +50,35 @@ func _ready():
 	tileMap.set_layer_enabled(1,true)
 	
 
-func openRoom(id: int):
+func openRoom(id: int, animated: bool = false, disable: bool=false):
 	var cellsToOpen := roomsMap.get_used_cells(id)
+	rooms[id].activate_room()
+	if disable:
+		disable_events()
 	
 	for cell in cellsToOpen:
 		tileMap.set_cell(1, cell)
+		
+		if animated:
+			_openSides()
+			await get_tree().create_timer(0.07).timeout
 		if !_openned_tiles.any(func(tile): return cell == tile):
 			_openned_tiles.append(cell)
 	_openSides()
+	
+func disable_events():
+	for room in rooms:
+		if not room.is_active:
+			continue
+			
+		room.disable_events()
+		
+func enable_events():
+	for room in rooms:
+		if not room.is_active:
+			continue
+			
+		room.enable_events()
 		
 func _openSides():
 	for cell in _openned_tiles:

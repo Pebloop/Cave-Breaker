@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogEventAddMonster" load_steps=3 format=3 uid="uid://uomo7wa1qdmm"]
+
+[ext_resource type="Resource" uid="uid://cl68nihetraue" path="res://cave-breaker/ressources/Monsters/monster_monstrolab.tres" id="1_fhkkx"]
+[ext_resource type="Script" path="res://cave-breaker/Scripts/dialogs/events/DialogEventAddMonster.gd" id="1_lrpgk"]
+
+[resource]
+script = ExtResource("1_lrpgk")
+monsters = Array[Resource("res://cave-breaker/Scripts/monsters/Monster.gd")]([ExtResource("1_fhkkx")])

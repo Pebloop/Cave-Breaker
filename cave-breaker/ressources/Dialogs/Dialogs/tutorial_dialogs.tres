@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Dialogs" load_steps=5 format=3 uid="uid://dh4roingrhh51"]
+[gd_resource type="Resource" script_class="Dialogs" load_steps=11 format=3 uid="uid://dh4roingrhh51"]
 
 [ext_resource type="Script" path="res://cave-breaker/Scripts/dialogs/dialog.gd" id="1_bagcn"]
 [ext_resource type="Script" path="res://cave-breaker/Scripts/dialogs/Dialogs.gd" id="2_84uha"]
@@ -12,9 +12,56 @@ dialog_en = "unused"
 [sub_resource type="Resource" id="Resource_71lla"]
 script = ExtResource("1_bagcn")
 key = "TUTO_000_1"
-dialog_fr = "Tu es nouveau ?"
+dialog_fr = "Non ! Attend !
+N'ai pas peur !"
+dialog_en = "unused"
+
+[sub_resource type="Resource" id="Resource_fb56o"]
+script = ExtResource("1_bagcn")
+key = "TUTO_000_2"
+dialog_fr = "Je m'appelle Monstrolab."
+dialog_en = "unused"
+
+[sub_resource type="Resource" id="Resource_dqphl"]
+script = ExtResource("1_bagcn")
+key = "TUTO_000_3"
+dialog_fr = "Je cherche aussi la sortie,
+Peut-être nous pouvons
+nous entraider !"
+dialog_en = "unused"
+
+[sub_resource type="Resource" id="Resource_gj468"]
+script = ExtResource("1_bagcn")
+key = "TUTO_000_4"
+dialog_fr = "Attend, je vais faire
+un peu de lumière !"
+dialog_en = "unused"
+
+[sub_resource type="Resource" id="Resource_ioqpg"]
+script = ExtResource("1_bagcn")
+key = "TUTO_000_5"
+dialog_fr = "Voilà qui est mieux !"
+dialog_en = "unused"
+
+[sub_resource type="Resource" id="Resource_8w8ii"]
+script = ExtResource("1_bagcn")
+key = "TUTO_000_6"
+dialog_fr = "Mm...
+Ces oeufs bloquent
+la sortie...
+Je peux peut-être faire
+quelque chose à ce sujet."
+dialog_en = "unused"
+
+[sub_resource type="Resource" id="Resource_cukdi"]
+script = ExtResource("1_bagcn")
+key = "TUTO_000_7"
+dialog_fr = "Vas-y, clique sur ce tas
+d'oeufs pour regarder
+de plus près et voyons
+ce qu'on peut faire !"
 dialog_en = "unused"
 
 [resource]
 script = ExtResource("2_84uha")
-dialogs = Array[ExtResource("1_bagcn")]([SubResource("Resource_03fwj"), SubResource("Resource_71lla")])
+dialogs = Array[ExtResource("1_bagcn")]([SubResource("Resource_03fwj"), SubResource("Resource_71lla"), SubResource("Resource_fb56o"), SubResource("Resource_dqphl"), SubResource("Resource_gj468"), SubResource("Resource_ioqpg"), SubResource("Resource_8w8ii"), SubResource("Resource_cukdi")])

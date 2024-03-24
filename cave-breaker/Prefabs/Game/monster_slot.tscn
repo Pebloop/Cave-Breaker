@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dva38yhs4txio"]
+
+[ext_resource type="Script" path="res://cave-breaker/Scripts/MarginEditor.gd" id="1_1d4f4"]
+[ext_resource type="Texture2D" uid="uid://bafqmisvgyc6f" path="res://cave-breaker/Images/UI/slot_round.png" id="2_vhomi"]
+
+[node name="MonsterSlot" type="MarginContainer"]
+script = ExtResource("1_1d4f4")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_vhomi")
+ignore_texture_size = true
+stretch_mode = 4

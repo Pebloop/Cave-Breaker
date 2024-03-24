@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Monster" load_steps=5 format=3 uid="uid://cl68nihetraue"]
+
+[ext_resource type="Script" path="res://cave-breaker/Scripts/monsters/Monster.gd" id="1_p1pyu"]
+[ext_resource type="Texture2D" uid="uid://djxqvhoslcloo" path="res://cave-breaker/Images/Monsters/monstrolab/Monstrolab_slot.png" id="2_fhi85"]
+[ext_resource type="Texture2D" uid="uid://bafqmisvgyc6f" path="res://cave-breaker/Images/UI/slot_round.png" id="3_1y6mf"]
+[ext_resource type="Texture2D" uid="uid://0w4kfu0a1l2" path="res://cave-breaker/Images/Monsters/monstrolab/monstrolab.png" id="4_x3iln"]
+
+[resource]
+script = ExtResource("1_p1pyu")
+id = "MONSTER_MONSTROLAB"
+name = "Monstrolab"
+rank = 5
+sprite = ExtResource("4_x3iln")
+slot_unactive = ExtResource("3_1y6mf")
+slot_active = ExtResource("2_fhi85")
+power_count = 10

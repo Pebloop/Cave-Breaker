@@ -6,7 +6,8 @@ enum Rank {
 	CHILD,
 	TEEN,
 	ADULT,
-	ELDER
+	ELDER,
+	SPECIAL
 }
 
 # Metadata of the monster
